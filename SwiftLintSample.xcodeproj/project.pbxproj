@@ -44,6 +44,7 @@
 		3C61E05A29A0B19500614230 /* SwiftLintSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C61E05E29A0B19500614230 /* SwiftLintSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintSampleUITests.swift; sourceTree = "<group>"; };
 		3C61E06029A0B19500614230 /* SwiftLintSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C61E07029A0B32200614230 /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BuildTools; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		3C61E03729A0B19200614230 = {
 			isa = PBXGroup;
 			children = (
+				3C61E07029A0B32200614230 /* BuildTools */,
 				3C61E04229A0B19200614230 /* SwiftLintSample */,
 				3C61E05329A0B19500614230 /* SwiftLintSampleTests */,
 				3C61E05D29A0B19500614230 /* SwiftLintSampleUITests */,
@@ -137,6 +139,7 @@
 				3C61E03C29A0B19200614230 /* Sources */,
 				3C61E03D29A0B19200614230 /* Frameworks */,
 				3C61E03E29A0B19200614230 /* Resources */,
+				3C61E06F29A0B27000614230 /* SwiftLint Run Script */,
 			);
 			buildRules = (
 			);
@@ -251,6 +254,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C61E06F29A0B27000614230 /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\ntool=./BuildTools/.build/release/swiftlint\n\nif which $tool > /dev/null; then\n  $tool\nelse\n  swift build -c release --package-path ./BuildTools --product swiftlint\n  $tool\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C61E03C29A0B19200614230 /* Sources */ = {
