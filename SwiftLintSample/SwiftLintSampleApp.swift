@@ -11,7 +11,7 @@ import SwiftUI
 struct Swift_Lint_SampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Content_View()
         }
     }
 }
