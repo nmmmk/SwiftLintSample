@@ -17,7 +17,7 @@ jobs:
 
       - name: Danger
 #       if: success() || failure()
-        uses: docker://ghcr.io/danger/danger-swift-with-swiftlint:3.15.0
+        uses: danger/swift@3.15.0
         with:
             args: --failOnErrors --no-publish-check
         env:
