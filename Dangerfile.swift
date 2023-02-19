@@ -3,4 +3,4 @@ import Foundation
 
 let danger = Danger()
 
-SwiftLint.lint(.modifiedAndCreatedFiles(directory: nil), inline: true, configFile: ".swiftlint.yml")
+SwiftLint.lint(inline: true, configFile: ".swiftlint.yml")
