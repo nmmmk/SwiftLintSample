@@ -8,10 +8,22 @@
 import SwiftUI
 
 @main
-struct SwiftLintSampleApp: App {
+struct Swift_Lint_SampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Content_View()
         }
     }
+}
+
+class Test {
+    var delegate: TestProtocol?
+
+    init(delegate: TestProtocol? = nil) {
+        self.delegate = delegate
+    }
+}
+
+protocol TestProtocol {
+    func test()
 }
