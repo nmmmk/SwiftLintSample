@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.2.1
+#      - name: GitHub Action for SwiftLint
+#        uses: norio-nomura/action-swiftlint@3.2.1
 
       - name: Danger
-        if: success() || failure()
+#       if: success() || failure()
         uses: docker://ghcr.io/danger/danger-swift-with-swiftlint:3.15.0
         with:
             args: --failOnErrors --no-publish-check
