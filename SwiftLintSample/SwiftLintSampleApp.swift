@@ -15,3 +15,15 @@ struct Swift_Lint_SampleApp: App {
         }
     }
 }
+
+class Test {
+    var delegate: TestProtocol?
+
+    init(delegate: TestProtocol? = nil) {
+        self.delegate = delegate
+    }
+}
+
+protocol TestProtocol {
+    func test()
+}
