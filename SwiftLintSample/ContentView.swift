@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Content_View: View {
+struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +21,6 @@ struct Content_View: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Content_View()
+        ContentView()
     }
 }
