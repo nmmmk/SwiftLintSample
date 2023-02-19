@@ -45,6 +45,7 @@
 		3C61E05E29A0B19500614230 /* SwiftLintSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintSampleUITests.swift; sourceTree = "<group>"; };
 		3C61E06029A0B19500614230 /* SwiftLintSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3C61E07029A0B32200614230 /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BuildTools; sourceTree = "<group>"; };
+		3C61E07329A12E1E00614230 /* Dangerfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dangerfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		3C61E03729A0B19200614230 = {
 			isa = PBXGroup;
 			children = (
+				3C61E07329A12E1E00614230 /* Dangerfile.swift */,
 				3C61E07029A0B32200614230 /* BuildTools */,
 				3C61E04229A0B19200614230 /* SwiftLintSample */,
 				3C61E05329A0B19500614230 /* SwiftLintSampleTests */,
